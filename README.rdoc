@@ -1,0 +1,27 @@
+== README
+
+This project parses textbooks from sites using:
+
+- Follett Virtual Store
+
+=== How to use (for now)
+
+  ruby bookstore.rb
+
+=== Dependencies
+
+- qt
+
+  brew update
+  brew install qt
+
+== Future
+
+ - Easy integration with Rake tasks
+
+== Follett Virtual Store
+
+Follett stores make extensive use of AJAX and JavaScript on their
+stores, therefore `Capybara` is used to interact with the website.
+
+Please, check source code for further documentation.
