@@ -81,7 +81,7 @@ module Bookstore
     end
 
     def select_department
-      wait_until { find(:xpath, "//*[@id='departmentIdSelect']").all("option").count > 1}
+      wait_until { find(:xpath, "//*[@id='departmentIdSelect']").all("option").count > 1 }
 
       departments = find(:xpath, "//*[@id='departmentIdSelect']").all("option")
       departments.shift
@@ -90,7 +90,7 @@ module Bookstore
     end
 
     def select_course
-      wait_until { find(:xpath, "//*[@id='courseIdSelect']").all("option").count > 1}
+      wait_until { find(:xpath, "//*[@id='courseIdSelect']").all("option").count > 1 }
 
       courses = find(:xpath, "//*[@id='courseIdSelect']").all("option")
       courses.shift
@@ -99,9 +99,9 @@ module Bookstore
     end
 
     def select_section
-      wait_until { find(:xpath, "//*[@id='sectionIdSelect']").all("option").count > 1}
+      wait_until { find(:xpath, "//*[@id='sectionIdSelect']").all("option").count > 1 }
 
-      sections = find(:xpath, "//*[@id='courseIdSelect']").all("option")
+      sections = find(:xpath, "//*[@id='sectionIdSelect']").all("option")
       sections.shift
 
       select sections.first.text, :from => "sectionIdSelect"
@@ -110,7 +110,7 @@ module Bookstore
     def submit_textbooks
       wait_until { find_button "Submit" }
 
-      click_button_submit
+      click_button "Submit"
     end
 
     def parse_course_materials
